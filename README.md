@@ -16,4 +16,7 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 9. [Secret Auction](https://github.com/michelletan/100-days-of-python/tree/main/009%20-%20Secret%20Auction)
 10. [Calculator](https://github.com/michelletan/100-days-of-python/tree/main/010%20-%20Calculator)
 11. [Blackjack](https://github.com/michelletan/100-days-of-python/tree/main/011%20-%20Blackjack)
+12. [Number Guessing Game](https://github.com/michelletan/100-days-of-python/tree/main/012%20-%20Number%20Guessing%20Game)
+13. Debugging (No project)
+14. [Higher Lower Game](https://github.com/michelletan/100-days-of-python/tree/main/014%20-%20Higher%20Lower%20Game)
 </details>
