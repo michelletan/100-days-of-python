@@ -13,4 +13,5 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 6. [Escaping the Maze](https://github.com/michelletan/100-days-of-python/tree/main/006%20-%20Escaping%20the%20Maze)
 7. [Hangman](https://github.com/michelletan/100-days-of-python/tree/main/007%20-%20Hangman)
 8. [Caesar Cipher](https://github.com/michelletan/100-days-of-python/tree/main/008%20-%20Caesar%20Cipher)
+9. [Secret Auction](https://github.com/michelletan/100-days-of-python/tree/main/009%20-%20Secret%20Auction)
 </details>
