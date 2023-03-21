@@ -15,4 +15,5 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 8. [Caesar Cipher](https://github.com/michelletan/100-days-of-python/tree/main/008%20-%20Caesar%20Cipher)
 9. [Secret Auction](https://github.com/michelletan/100-days-of-python/tree/main/009%20-%20Secret%20Auction)
 10. [Calculator](https://github.com/michelletan/100-days-of-python/tree/main/010%20-%20Calculator)
+11. [Blackjack](https://github.com/michelletan/100-days-of-python/tree/main/011%20-%20Blackjack)
 </details>
