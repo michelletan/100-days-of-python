@@ -18,6 +18,8 @@
 # The computer is the dealer.
 
 import random
+import os
+from art import logo
 from enum import Enum
 
 
@@ -27,6 +29,7 @@ class GameState(Enum):
     DRAW = 2
 
 
+# Ace starts with value 11
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 
@@ -38,13 +41,21 @@ def get_score(hand):
     return sum(hand)
 
 
-def add_cards_to_hand(hand, num=1):
-    for _ in range(num):
-        hand.append(get_card())
+def add_card_to_hand(hand):
+    hand.append(get_card())
+    curr_score = get_score(hand)
+    if curr_score > 21 and 11 in hand:
+        # If the score is over 21, check if there are aces to convert to value 1
+        i = hand.index(11)
+        hand[i] = 1
 
 
 def is_blackjack(hand):
     return get_score(hand) == 21
+
+
+def is_over(hand):
+    return get_score(hand) > 21
 
 
 def get_formatted_hand(hand):
@@ -53,7 +64,7 @@ def get_formatted_hand(hand):
 
 def print_scores(player_hand, computer_hand):
     print(
-        f"Your cards: {get_formatted_hand(player_hand)}, final score: {get_score(player_hand)}")
+        f"Your cards: {get_formatted_hand(player_hand)}, current score: {get_score(player_hand)}")
     print(
         f"Computer's first card: {str(computer_hand[0])}")
 
@@ -65,7 +76,7 @@ def print_final_scores(player_hand, computer_hand):
         f"Computer's cards: {get_formatted_hand(computer_hand)}, final score: {get_score(computer_hand)}")
 
 
-def handle_end(player_hand, computer_hand, state):
+def handle_end(player_hand, computer_hand, state, is_blackjack=False):
     """Handles the end of the game, given the game state.
     The game state should be a GameState enum."""
     print_final_scores(player_hand=player_hand, computer_hand=computer_hand)
@@ -78,8 +89,9 @@ def handle_end(player_hand, computer_hand, state):
             print("Draw!")
         case _:
             print("No game state given.")
-    user_action = input("Type 'y' to start another game, or 'n' to end.")
+    user_action = input("Type 'y' to start another game, or 'n' to end. >> ")
     if user_action == 'y':
+        os.system('clear')
         blackjack()
     else:
         print("Thanks for playing!")
@@ -90,21 +102,55 @@ def blackjack():
     player_hand = []
     computer_hand = []
 
+    print(logo)
+    print("Welcome to Blackjack! \n")
+
     # Deal 2 cards to each player
-    add_cards_to_hand(player_hand, 2)
-    add_cards_to_hand(computer_hand, 2)
+    add_card_to_hand(player_hand)
+    add_card_to_hand(player_hand)
+    add_card_to_hand(computer_hand)
+    add_card_to_hand(computer_hand)
 
     if is_blackjack(player_hand):
         if is_blackjack(computer_hand):
             handle_end(player_hand, computer_hand, GameState.DRAW)
         else:
-            handle_end(player_hand, computer_hand, GameState.WIN)
+            handle_end(player_hand, computer_hand, GameState.WIN, True)
     elif is_blackjack(computer_hand):
-        handle_end(player_hand, computer_hand, GameState.LOSE)
+        handle_end(player_hand, computer_hand, GameState.LOSE, True)
 
-    # Continue
-    print_scores(player_hand, computer_hand)
-    player_card = input("Want another card?: ")
+    # Player's turn
+    player_done = False
+    while not player_done:
+        print_scores(player_hand, computer_hand)
+        player_input = input(
+            "Want another card? Type 'y' for another card, 'n' to end your turn: ")
+        if player_input == 'y':
+            add_card_to_hand(player_hand)
+            if is_over(player_hand):
+                handle_end(player_hand, computer_hand, GameState.LOSE)
+        else:
+            player_done = True
+
+    # Computer's turn
+    computer_done = False
+    while not computer_done:
+        if get_score(computer_hand) < 17:
+            add_card_to_hand(computer_hand)
+            if is_over(computer_hand):
+                handle_end(player_hand, computer_hand, GameState.WIN)
+        else:
+            computer_done = True
+
+    # Compare final scores
+    player_score = get_score(player_hand)
+    computer_score = get_score(computer_hand)
+    if player_score > computer_score:
+        handle_end(player_hand, computer_hand, GameState.WIN)
+    elif player_score < computer_score:
+        handle_end(player_hand, computer_hand, GameState.LOSE)
+    else:
+        handle_end(player_hand, computer_hand, GameState.DRAW)
 
 
 # Program Start
