@@ -28,5 +28,6 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 15. [Coffee Machine](https://github.com/michelletan/100-days-of-python/tree/main/015%20-%20Coffee%20Machine)
 16. [Coffee Machine OOP](https://github.com/michelletan/100-days-of-python/tree/main/016%20-%20Coffee%20Machine%20%28OOP%29)
 17. [Quiz Project](https://github.com/michelletan/100-days-of-python/tree/main/017%20-%20Quiz%20Project)
+18. [Hisrt Painting](https://github.com/michelletan/100-days-of-python/tree/main/018%20-%20Hirst%20Painting)
 
 </details>
