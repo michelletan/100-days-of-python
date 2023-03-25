@@ -19,4 +19,14 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 12. [Number Guessing Game](https://github.com/michelletan/100-days-of-python/tree/main/012%20-%20Number%20Guessing%20Game)
 13. Debugging (No project)
 14. [Higher Lower Game](https://github.com/michelletan/100-days-of-python/tree/main/014%20-%20Higher%20Lower%20Game)
+<br />
+</details>
+<br />
+<details open>
+<summary><b>Days 015 - ? (Intermediate)</b></summary>
+
+15. [Coffee Machine](https://github.com/michelletan/100-days-of-python/tree/main/015%20-%20Coffee%20Machine)
+16. [Coffee Machine OOP](https://github.com/michelletan/100-days-of-python/tree/main/016%20-%20Coffee%20Machine%20%28OOP%29)
+17. [Quiz Project](https://github.com/michelletan/100-days-of-python/tree/main/017%20-%20Quiz%20Project)
+
 </details>
