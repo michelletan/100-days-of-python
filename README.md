@@ -30,5 +30,7 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 17. [Quiz Project](https://github.com/michelletan/100-days-of-python/tree/main/017%20-%20Quiz%20Project)
 18. [Hisrt Painting](https://github.com/michelletan/100-days-of-python/tree/main/018%20-%20Hirst%20Painting)
 19. [Turtle Race](https://github.com/michelletan/100-days-of-python/tree/main/019%20-%20Turtle%20Race)
+20. [Snake Part 1](https://github.com/michelletan/100-days-of-python/tree/main/020%20-%20Snake%20Part%201)
+21. [Snake Part 2](https://github.com/michelletan/100-days-of-python/tree/main/021%20-%20Snake%20Part%202)
 
 </details>
