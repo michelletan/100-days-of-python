@@ -9,7 +9,7 @@ MAX_Y = 10
 class Ball(Turtle):
     def __init__(self) -> None:
         super().__init__()
-        self.shape("square")
+        self.shape("circle")
         self.penup()
         self.shapesize(stretch_len=0.7, stretch_wid=0.7)
         self.color("white")
