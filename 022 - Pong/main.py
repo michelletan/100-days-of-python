@@ -1,4 +1,4 @@
-from turtle import Screen
+from turtle import Screen, Turtle
 from paddle import Paddle
 from ball import Ball
 from scoreboard import Scoreboard
@@ -23,9 +23,31 @@ ball = Ball()
 scoreboard = Scoreboard(x=0, y=SCREEN_HEIGHT/2 - 40)
 
 screen.listen()
-screen.onkey(p1.up, "Up")
-screen.onkey(p1.down, "Down")
+screen.onkeypress(p1.up, "q")
+screen.onkeypress(p1.down, "a")
+screen.onkeypress(p2.up, "Up")
+screen.onkeypress(p2.down, "Down")
 
+
+def draw_board():
+    pen = Turtle()
+    pen.color("gray")
+    pen.pensize(3)
+    pen.hideturtle()
+    pos_y = -SCREEN_HEIGHT/2
+    pen_down = True
+
+    while pos_y <= SCREEN_HEIGHT/2:
+        if pen_down == False:
+            pen.pendown()
+        else:
+            pen.penup()
+        pen.goto(0, pos_y)
+        pos_y += 10
+        pen_down = not pen_down
+
+
+draw_board()
 game_on = True
 while game_on:
     screen.update()
@@ -33,24 +55,32 @@ while game_on:
     ball.move()
 
     # Detect collision with p1 and ball
+    p1_scored = False
     for block in p1.blocks:
         if ball.distance(block) < COLLISION_OFFSET:
-            ball.change_direction()
-            scoreboard.increase_score(isPlayer=True)
+            p1_scored = True
+    if p1_scored:
+        ball.bounce_on_player()
 
     # Detect collision with p2 and ball
+    p2_scored = False
     for block in p2.blocks:
         if ball.distance(block) < COLLISION_OFFSET:
-            ball.change_direction()
-            scoreboard.increase_score(isPlayer=False)
+            p2_scored = True
+    if p2_scored:
+        ball.bounce_on_player()
 
     # Detect collision with walls behind players
-    if ball.xcor() > WALL_X or ball.xcor() < -WALL_X:
-        game_on = False
-        scoreboard.game_over()
+    if ball.xcor() > WALL_X:
+        scoreboard.increase_score(isPlayer=True)
+        ball.reset_position()
+
+    if ball.xcor() < -WALL_X:
+        scoreboard.increase_score(isPlayer=False)
+        ball.reset_position()
 
     # Detect collision with top and bottom walls
     if ball.ycor() > WALL_Y or ball.ycor() < -WALL_Y:
-        ball.change_direction()
+        ball.bounce_on_wall()
 
 screen.exitonclick()

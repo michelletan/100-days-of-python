@@ -1,8 +1,9 @@
 from turtle import Turtle
 import random
 
-DISTANCE = 10
-START_DIRECTION = 180
+MAX_SPEED = 20
+MAX_X = 15
+MAX_Y = 10
 
 
 class Ball(Turtle):
@@ -12,13 +13,22 @@ class Ball(Turtle):
         self.penup()
         self.shapesize(stretch_len=0.7, stretch_wid=0.7)
         self.color("white")
-        # self.speed("fastest")
-        self.setheading(random.randint(0, 360))
-        self.move()
+        self.randomise_direction()
+        self.speed_x = random.choice([MAX_X, -MAX_X])
 
-    def change_direction(self):
-        new_direction = (self.heading() + 90) % 360
-        self.setheading(new_direction)
+    def reset_position(self):
+        self.goto(0, 0)
+        self.randomise_direction()
+
+    def randomise_direction(self):
+        self.speed_y = random.randint(-MAX_Y, MAX_Y)
+
+    def bounce_on_wall(self):
+        self.speed_y = -self.speed_y
+
+    def bounce_on_player(self):
+        self.speed_x = -self.speed_x
 
     def move(self):
-        self.forward(DISTANCE)
+        pos = self.position()
+        self.goto(pos[0] + self.speed_x, pos[1] + self.speed_y)
