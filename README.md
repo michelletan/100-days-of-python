@@ -32,5 +32,8 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 19. [Turtle Race](https://github.com/michelletan/100-days-of-python/tree/main/019%20-%20Turtle%20Race)
 20. [Snake Part 1](https://github.com/michelletan/100-days-of-python/tree/main/020%20-%20Snake%20Part%201)
 21. [Snake Part 2](https://github.com/michelletan/100-days-of-python/tree/main/021%20-%20Snake%20Part%202)
+22. [Pong](https://github.com/michelletan/100-days-of-python/tree/main/022%20-%20Pong)
+23. [Turtle Crossing](https://github.com/michelletan/100-days-of-python/tree/main/023%20-%20Turtle%20Crossing)
+
 
 </details>
