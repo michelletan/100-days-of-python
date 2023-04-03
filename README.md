@@ -34,6 +34,6 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 21. [Snake Part 2](https://github.com/michelletan/100-days-of-python/tree/main/021%20-%20Snake%20Part%202)
 22. [Pong](https://github.com/michelletan/100-days-of-python/tree/main/022%20-%20Pong)
 23. [Turtle Crossing](https://github.com/michelletan/100-days-of-python/tree/main/023%20-%20Turtle%20Crossing)
-
-
+24. [Mail Merge](https://github.com/michelletan/100-days-of-python/tree/main/024%20-%20Mail%20Merge)
+25. [US States Guessing Game](https://github.com/michelletan/100-days-of-python/tree/main/025%20-%20US%20States%20Guessing%20Game)
 </details>
