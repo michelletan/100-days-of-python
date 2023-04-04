@@ -4,6 +4,9 @@ Task: Create a quiz game where the player has to guess the names of all US state
 
 Type 'exit' to exit the game and output a csv with all the states that were not guessed.
 
+## Screenshot
+![US map game](game.png)
+
 Learning Points:
 - Pandas
 - File I/O
