@@ -23,7 +23,7 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 </details>
 <br />
 <details open>
-<summary><b>Days 015 - ? (Intermediate)</b></summary>
+<summary><b>Days 015 - 031 (Intermediate)</b></summary>
 
 15. [Coffee Machine](https://github.com/michelletan/100-days-of-python/tree/main/015%20-%20Coffee%20Machine)
 16. [Coffee Machine OOP](https://github.com/michelletan/100-days-of-python/tree/main/016%20-%20Coffee%20Machine%20%28OOP%29)
@@ -36,4 +36,10 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 23. [Turtle Crossing](https://github.com/michelletan/100-days-of-python/tree/main/023%20-%20Turtle%20Crossing)
 24. [Mail Merge](https://github.com/michelletan/100-days-of-python/tree/main/024%20-%20Mail%20Merge)
 25. [US States Guessing Game](https://github.com/michelletan/100-days-of-python/tree/main/025%20-%20US%20States%20Guessing%20Game)
+26. [NATO Alphabet](https://github.com/michelletan/100-days-of-python/tree/main/026%20-%2NATO%20Alphabet)
+27. [Miles to Kilometers Converter](https://github.com/michelletan/100-days-of-python/tree/main/027%20-%20Miles%20to%20Kilometers%20Converter)
+28. [Pomodoro](https://github.com/michelletan/100-days-of-python/tree/main/028%20-%20Pomodoro)
+29. [Password Manager](https://github.com/michelletan/100-days-of-python/tree/main/029%20-%20Password%20Manager)
+30. [Password Manager with JSON](https://github.com/michelletan/100-days-of-python/tree/main/030%20-%20Password%20Manager%20with%20JSON)
+31. [Flash Card App](https://github.com/michelletan/100-days-of-python/tree/main/031%20-%20Flash%20Card%20App)
 </details>
