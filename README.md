@@ -2,7 +2,7 @@
 Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-code
 
 ## Projects
-<details >
+<details>
 <summary><b>Days 001 - 014 (Beginner)</b></summary>
 
 1. [Band Name Generator](https://github.com/michelletan/100-days-of-python/tree/main/001%20-%20Band%20Name%20Generator)
@@ -36,7 +36,7 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 23. [Turtle Crossing](https://github.com/michelletan/100-days-of-python/tree/main/023%20-%20Turtle%20Crossing)
 24. [Mail Merge](https://github.com/michelletan/100-days-of-python/tree/main/024%20-%20Mail%20Merge)
 25. [US States Guessing Game](https://github.com/michelletan/100-days-of-python/tree/main/025%20-%20US%20States%20Guessing%20Game)
-26. [NATO Alphabet](https://github.com/michelletan/100-days-of-python/tree/main/026%20-%2NATO%20Alphabet)
+26. [NATO Alphabet](https://github.com/michelletan/100-days-of-python/tree/main/026%20-%20NATO%20Alphabet)
 27. [Miles to Kilometers Converter](https://github.com/michelletan/100-days-of-python/tree/main/027%20-%20Miles%20to%20Kilometers%20Converter)
 28. [Pomodoro](https://github.com/michelletan/100-days-of-python/tree/main/028%20-%20Pomodoro)
 29. [Password Manager](https://github.com/michelletan/100-days-of-python/tree/main/029%20-%20Password%20Manager)
