@@ -1,4 +1,4 @@
-# Day 002 - Tip calculator
+# Day 002 - Tip Calculator
 
 Task: Calculate how much each person should pay, given a total bill, tip % and no. of people
 

@@ -1,4 +1,4 @@
-# Day 001 - Band name generator
+# Day 001 - Band Name Generator
 
 Task: Get a city name and pet name from the user, then print out a string combining both variables
 

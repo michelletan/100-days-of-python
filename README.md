@@ -5,8 +5,8 @@ Projects for Python bootcamp on Udemy: https://www.udemy.com/course/100-days-of-
 <details >
 <summary><b>Days 001 - 014 (Beginner)</b></summary>
 
-1. [Band name generator](https://github.com/michelletan/100-days-of-python/tree/main/001%20-%20Band%20name%20generator)
-2. [Tip calculator](https://github.com/michelletan/100-days-of-python/tree/main/002%20-%20Tip%20calculator)
+1. [Band Name Generator](https://github.com/michelletan/100-days-of-python/tree/main/001%20-%20Band%20Name%20Generator)
+2. [Tip Calculator](https://github.com/michelletan/100-days-of-python/tree/main/002%20-%20Tip%20Calculator)
 3. [Treasure Island](https://github.com/michelletan/100-days-of-python/tree/main/003%20-%20Treasure%20Island)
 4. [Rock Paper Scissors](https://github.com/michelletan/100-days-of-python/tree/main/004%20-%20Rock%20Paper%20Scissors)
 5. [Password Generator](https://github.com/michelletan/100-days-of-python/tree/main/005%20-%20Password%20Generator)
