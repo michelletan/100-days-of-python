@@ -48,14 +48,47 @@ def save_password():
             title=website, message=f"These are the details entered:\n Email:{email}\n Password: {password}\n Is it ok to save?")
 
         if is_ok:
+            try:
+                with open(OUTPUT_FILEPATH, mode="r") as save_file:
+                    save_data = json.load(save_file)
+            except FileNotFoundError:
+                with open(OUTPUT_FILEPATH, mode="w") as save_file:
+                    json.dump(new_data, save_file, indent=4)
+            except json.JSONDecodeError:
+                with open(OUTPUT_FILEPATH, mode="w") as save_file:
+                    json.dump(new_data, save_file, indent=4)
+            else:
+                save_data.update(new_data)
+                with open(OUTPUT_FILEPATH, mode="w") as save_file:
+                    json.dump(save_data, save_file, indent=4)
+            finally:
+                clear_inputs(website_entry, password_entry)
+
+# ---------------------------- SEARCH PASSWORD ------------------------------- #
+
+
+def search_website():
+    global website_entry
+    keyword = website_entry.get()
+    if keyword:
+        try:
             with open(OUTPUT_FILEPATH, mode="r") as save_file:
                 save_data = json.load(save_file)
-                save_data.update(new_data)
+        except FileNotFoundError:
+            messagebox.showinfo(message="Save file does not exist.")
+        except json.JSONDecodeError:
+            messagebox.showinfo(message="Save file is empty.")
+        else:
 
-            with open(OUTPUT_FILEPATH, mode="w") as save_file:
-                json.dump(save_data, save_file, indent=4)
-
-            clear_inputs(website_entry, password_entry)
+            result = save_data.get(keyword)
+            if result:
+                messagebox.showinfo(
+                    message=f"Email: {result['email']} \n Password: {result['password']}")
+            else:
+                messagebox.showinfo(
+                    message=f"Sorry, {keyword} was not found in your saved data.")
+    else:
+        messagebox.showwarning(message="Website cannot be empty.")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -74,8 +107,11 @@ website_label = Label(text="Website:",
 website_label.grid(row=1, column=0, pady=GRID_PADDING_Y)
 
 website_entry = Entry()
-website_entry.grid(row=1, column=1, columnspan=2, sticky="ew")
+website_entry.grid(row=1, column=1, sticky="ew")
 website_entry.focus()
+
+search_btn = Button(text="Search", command=search_website)
+search_btn.grid(row=1, column=2, sticky="ew")
 
 email_label = Label(text="Email:", anchor="e", font=FONT)
 email_label.grid(row=2, column=0, pady=GRID_PADDING_Y)
