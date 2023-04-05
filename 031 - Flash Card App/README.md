@@ -2,11 +2,10 @@
 
 Task: Create a flash card app for learning languages.
 
-Target language = Language user wants to learn
-Source language = Language user already knows
-
-Learning pile = Cards with words that user wants to learn
-Discard pile = Cards which user has already learned
+- Target language = Language user wants to learn
+- Source language = Language user already knows
+- Learning pile = Cards with words that user wants to learn
+- Discard pile = Cards which user has already learned
 
 ### Project Requirements
 - Show a series of flash cards to user 
@@ -20,10 +19,9 @@ Discard pile = Cards which user has already learned
 - Add one more learning item: Romaji (romanised pronounciation of the Japanese words)
 - Show romaji on the back of the card
 
-### Good-to-haves
-- Add a menu page that allows user to choose between the learning pile and the discard pile
-- Allow user to choose number of cards to show
-- Allow user to move cards between each pile
+## Screenshots
+![Screenshot of the app showing the front of a card](front.png)
+![Screenshot of the app showing the back of a card](back.png)
 
 ## Data Set
 
@@ -35,3 +33,4 @@ The English translations were retrieved from the Google Translate API, and the R
 ## Learning Points
 - GUI with Tkinter
 - Read/write from CSV
+- Manipulate data with Pandas
